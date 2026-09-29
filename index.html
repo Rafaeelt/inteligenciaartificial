@@ -1,284 +1,253 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Inteligência Artificial Generativa</title>
-
+    <title>Portalia - Portal de Inteligência Artificial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
+    <header class="cabecalho">
+        <div class="logo">Portal<span>IA</span></div>
 
-<main>
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#ferramentas">Ferramentas</a>
+        </nav>
+    </header>
 
-    <!-- HERO -->
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <p class="etiqueta">TCC - Técnico em Desenvolvimento de Sistemas</p>
+                <h1>Portalia: um portal de ferramentas de Inteligência Artificial</h1>
+                <p>
+                    O Portalia reúne ferramentas de Inteligência Artificial em um único
+                    lugar. A ideia é ajudar o usuário a encontrar uma IA de acordo com
+                    sua necessidade, como estudar, escrever, criar imagens ou programar.
+                </p>
 
-    <section class="ia-generativa">
+                <div class="botoes-hero">
+                    <a class="botao principal" href="#ferramentas">Ver ferramentas</a>
+                    <a class="botao secundario" href="#sobre">Entender o projeto</a>
+                </div>
+            </div>
 
-        <div class="texto-hero">
+            <div class="hero-card">
+                <h2>Como o Portalia ajuda?</h2>
+                <ul>
+                    <li>Organiza ferramentas por categoria.</li>
+                    <li>Explica para que cada IA serve.</li>
+                    <li>Usa linguagem simples e direta.</li>
+                    <li>Facilita o estudo sobre IA Generativa.</li>
+                </ul>
+            </div>
+        </section>
 
-            <h2>Inteligência Artificial Generativa</h2>
-
-            <p>
-                Descubra como a Inteligência Artificial Generativa está revolucionando
-                a criação de textos, imagens, músicas, vídeos e códigos,
-                transformando a maneira como pessoas e empresas inovam.
+        <section id="sobre" class="secao">
+            <p class="etiqueta">Fundamentos</p>
+            <h2>O que é Inteligência Artificial?</h2>
+            <p class="descricao">
+                A Inteligência Artificial Generativa é um ramo da inteligência artificial
+                capaz de criar novos conteúdos, como textos, imagens, músicas, vídeos e
+                códigos, utilizando modelos treinados com grandes volumes de dados.
             </p>
-<a href="#sobre" class="botao">
-    Saiba Mais
-</a>
 
-        </div>
+            <div class="cards">
+                <article class="card">
+                    <span class="icone">🧠</span>
+                    <h3>Aprender com dados</h3>
+                    <p>A IA analisa informações e aprende padrões para gerar respostas.</p>
+                </article>
 
-        <div class="imagem-hero">
+                <article class="card">
+                    <span class="icone">💬</span>
+                    <h3>Entender linguagem</h3>
+                    <p>Algumas ferramentas entendem perguntas e textos escritos por pessoas.</p>
+                </article>
 
-            <img src="https://placehold.co/500x500/png?text=IA"
-                alt="Imagem Inteligência Artificial">
+                <article class="card">
+                    <span class="icone">✨</span>
+                    <h3>Criar conteúdos</h3>
+                    <p>A IA Generativa pode criar textos, imagens, vídeos, músicas e códigos.</p>
+                </article>
+            </div>
+        </section>
 
-        </div>
+        <section id="objetivos" class="secao destaque">
+            <p class="etiqueta">TCC do Rafael</p>
+            <h2>Objetivos do projeto</h2>
+            <p class="descricao">
+                O objetivo geral do trabalho é desenvolver um website educativo sobre
+                Inteligência Artificial Generativa.
+            </p>
 
-    </section>
+            <div class="lista-objetivos">
+                <div>
+                    <strong>1</strong>
+                    <p>Entender o que é Inteligência Artificial e IA Generativa.</p>
+                </div>
+                <div>
+                    <strong>2</strong>
+                    <p>Conhecer ferramentas de IA e saber para que elas podem ser usadas.</p>
+                </div>
+                <div>
+                    <strong>3</strong>
+                    <p>Conhecer benefícios, riscos e cuidados ao usar Inteligência Artificial.</p>
+                </div>
+                <div>
+                    <strong>4</strong>
+                    <p>Criar um site que reúna ferramentas de IA em um único lugar.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- SOBRE -->
+        <section id="ferramentas" class="secao">
+            <p class="etiqueta">Portalia</p>
+            <h2>Ferramentas de IA por categoria</h2>
+            <p class="descricao">
+                Clique em uma categoria para filtrar as ferramentas. Esse é o pequeno
+                recurso em JavaScript do site.
+            </p>
 
-    <section id="sobre" class="sobre-ia">
 
-        <h2>O que é Inteligência Artificial Generativa?</h2>
 
-        <p class="descricao">
+            <div class="cards ferramentas-grid">
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="texto">
+                    <h3>Texto e produtividade</h3>
+                    <p>Ferramentas para criar textos, resumir conteúdos, responder perguntas e organizar ideias.</p>
 
-            A Inteligência Artificial Generativa é um ramo da inteligência
-            artificial capaz de criar novos conteúdos, como textos,
-            imagens, músicas, vídeos e códigos, utilizando modelos
-            treinados com grandes volumes de dados.
+                </article>
 
-        </p>
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="estudo">
+                    <h3>Aprender com IA</h3>
+                    <p>Recursos para estudar documentos, pesquisar informações e compreender assuntos complexos.</p>
 
-        <div class="cards">
+                </article>
 
-            <div class="card">
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="imagem">
+                    <h3>Criar imagens</h3>
+                    <p>Ferramentas para gerar imagens, ilustrações, apresentações e materiais visuais.</p>
 
-                <h3>🧠 Textos</h3>
+                </article>
 
-                <p>
-                    Produção automática de textos, resumos, artigos e respostas inteligentes.
-                </p>
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="programacao">
+                    <h3>Programar com IA</h3>
+                    <p>Assistentes que ajudam a escrever, explicar, revisar e melhorar códigos e projetos.</p>
 
+                </article>
+
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="audio-video">
+                    <h3>Criar multimídia</h3>
+                    <p>Soluções para produzir músicas, narrações, vídeos, animações e outros conteúdos digitais.</p>
+
+                </article>
+
+                <article class="card ferramenta categoria-card" tabindex="0" role="button" data-categoria="automacao">
+                    <h3>Otimizar tarefas</h3>
+                    <p>Ferramentas que ajudam a automatizar processos, organizar informações e aumentar a produtividade.</p>
+
+                </article>
             </div>
 
-            <div class="card">
+            <div class="opcoes-categoria" aria-live="polite">
+                <div class="opcoes-lista visivel" data-opcoes="texto">
+                    <h3>Ferramentas para texto e produtividade</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-chatgpt">GPT</span><strong>ChatGPT</strong><span class="descricao-opcao">Assistente geral para redação, ideação e análise de dados.</span></a>
+                        <a class="ferramenta-opcao" href="https://claude.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-claude">C</span><strong>Claude</strong><span class="descricao-opcao">Escrita profissional, textos longos e revisão de códigos.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.notion.so/product/ai" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-notion">N</span><strong>Notion AI</strong><span class="descricao-opcao">Organização pessoal e de equipe, reuniões e projetos.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-grammarly">G</span><strong>Grammarly</strong><span class="descricao-opcao">Correção gramatical, tom e refinamento de escrita.</span></a>
+                        <a class="ferramenta-opcao" href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-copilot">✦</span><strong>Microsoft Copilot</strong><span class="descricao-opcao">Produtividade integrada ao Word, Excel e PowerPoint.</span></a>
+                    </div>
+                </div>
 
-                <h3>🎨 Imagens</h3>
+                <div class="opcoes-lista" data-opcoes="estudo">
+                    <h3>Ferramentas para aprender com IA</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://www.khanacademy.org/khan-labs" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-khan">K</span><strong>Khanmigo</strong><span class="descricao-opcao">Tutor virtual que guia o aprendizado em matemática e ciências.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-duolingo">D</span><strong>Duolingo Max</strong><span class="descricao-opcao">Conversação e aprendizado de idiomas com IA.</span></a>
+                        <a class="ferramenta-opcao" href="https://quizlet.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-quizlet">Q</span><strong>Quizlet</strong><span class="descricao-opcao">Flashcards e estudos interativos para provas.</span></a>
+                        <a class="ferramenta-opcao" href="https://consilience.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-consilience">C</span><strong>Consilience AI</strong><span class="descricao-opcao">Pesquisa acadêmica com artigos e fontes verificadas.</span></a>
+                        <a class="ferramenta-opcao" href="https://gamma.app/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-gamma">G</span><strong>Gamma App</strong><span class="descricao-opcao">Criação de apresentações e materiais didáticos.</span></a>
+                    </div>
+                </div>
 
-                <p>
-                    Criação de ilustrações, fotografias, logotipos e artes digitais.
-                </p>
+                <div class="opcoes-lista" data-opcoes="imagem">
+                    <h3>Ferramentas para criar imagens</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-midjourney">MJ</span><strong>Midjourney</strong><span class="descricao-opcao">Realismo fotográfico, texturas e ilustrações artísticas.</span></a>
+                        <a class="ferramenta-opcao" href="https://openai.com/index/dall-e-3/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-dalle">D3</span><strong>DALL·E 3</strong><span class="descricao-opcao">Compreensão de comandos textuais complexos.</span></a>
+                        <a class="ferramenta-opcao" href="https://blackforestlabs.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-flux">F</span><strong>Flux.1</strong><span class="descricao-opcao">Modelo open-source com textos e anatomia realista.</span></a>
+                        <a class="ferramenta-opcao" href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-firefly">A</span><strong>Adobe Firefly</strong><span class="descricao-opcao">Uso comercial integrado ao Photoshop e Illustrator.</span></a>
+                        <a class="ferramenta-opcao" href="https://stability.ai/stable-image" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-stable">SD</span><strong>Stable Diffusion</strong><span class="descricao-opcao">Controle total, customização e execução local.</span></a>
+                    </div>
+                </div>
 
+                <div class="opcoes-lista" data-opcoes="programacao">
+                    <h3>Ferramentas para programar com IA</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://cursor.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-cursor">C</span><strong>Cursor</strong><span class="descricao-opcao">Editor com IA para autocompletar, refatorar e criar projetos.</span></a>
+                        <a class="ferramenta-opcao" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-github">GH</span><strong>GitHub Copilot</strong><span class="descricao-opcao">Assistente integrado ao VS Code para sugerir código.</span></a>
+                        <a class="ferramenta-opcao" href="https://claude.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-claude">C</span><strong>Claude</strong><span class="descricao-opcao">Lógica, arquitetura de software e explicação de bugs.</span></a>
+                        <a class="ferramenta-opcao" href="https://v0.dev/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-v0">v0</span><strong>v0</strong><span class="descricao-opcao">Criação de interfaces front-end em React e Tailwind.</span></a>
+                        <a class="ferramenta-opcao" href="https://replit.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-replit">R</span><strong>Replit Agent</strong><span class="descricao-opcao">Prototipagem rápida e criação de aplicações completas.</span></a>
+                    </div>
+                </div>
+
+                <div class="opcoes-lista" data-opcoes="audio-video">
+                    <h3>Ferramentas para áudio e vídeo</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://runwayml.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-runway">R</span><strong>Runway Gen-3</strong><span class="descricao-opcao">Vídeos e efeitos visuais hiper-realistas a partir de texto ou imagem.</span></a>
+                        <a class="ferramenta-opcao" href="https://suno.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-suno">S</span><strong>Suno AI</strong><span class="descricao-opcao">Criação de músicas completas com letra, melodia e voz.</span></a>
+                        <a class="ferramenta-opcao" href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-eleven">11</span><strong>ElevenLabs</strong><span class="descricao-opcao">Clonagem de voz e narrações com entonação natural.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-heygen">H</span><strong>HeyGen</strong><span class="descricao-opcao">Avatares digitais e vídeos traduzidos com sincronização labial.</span></a>
+                        <a class="ferramenta-opcao" href="https://lumalabs.ai/dream-machine" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-luma">L</span><strong>Luma Dream Machine</strong><span class="descricao-opcao">Vídeos dinâmicos com movimentos de câmera e física fluida.</span></a>
+                    </div>
+                </div>
+
+                <div class="opcoes-lista" data-opcoes="automacao">
+                    <h3>Ferramentas para otimizar tarefas</h3>
+                    <div class="opcoes-grid">
+                        <a class="ferramenta-opcao" href="https://zapier.com/central" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-zapier">Z</span><strong>Zapier Central</strong><span class="descricao-opcao">Automação de tarefas entre milhares de aplicativos.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.make.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-make">M</span><strong>Make</strong><span class="descricao-opcao">Fluxos visuais e integrações avançadas com IA.</span></a>
+                        <a class="ferramenta-opcao" href="https://www.granola.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-granola">G</span><strong>Granola</strong><span class="descricao-opcao">Transcrição e resumo inteligente de reuniões.</span></a>
+                        <a class="ferramenta-opcao" href="https://julius.ai/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-julius">J</span><strong>Julius AI</strong><span class="descricao-opcao">Análise de dados, gráficos e projeções complexas.</span></a>
+                        <a class="ferramenta-opcao" href="https://todoist.com/" target="_blank" rel="noopener noreferrer"><span class="ferramenta-logo logo-todoist">T</span><strong>Todoist com IA</strong><span class="descricao-opcao">Organização de tarefas, metas e prioridades.</span></a>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-
-                <h3>💻 Códigos</h3>
-
-                <p>
-                    Auxílio no desenvolvimento de softwares, scripts e aplicações.
-                </p>
-
+        <section class="secao cuidados">
+            <p class="etiqueta">Uso consciente</p>
+            <h2>Cuidados ao usar IA</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Revisar respostas</h3>
+                    <p>A IA pode cometer erros. Sempre confira as informações importantes.</p>
+                </article>
+                <article class="card">
+                    <h3>Não copiar sem entender</h3>
+                    <p>O ideal é usar a IA como apoio para aprender, não como substituta do estudo.</p>
+                </article>
+                <article class="card">
+                    <h3>Proteger dados pessoais</h3>
+                    <p>Não envie senhas, documentos ou informações pessoais para ferramentas de IA.</p>
+                </article>
             </div>
+        </section>
+    </main>
 
-        </div>
-
-    </section>
-
-    <!-- FERRAMENTAS -->
-
-    <section class="ferramentas">
-
-        <h2>Principais Ferramentas de IA</h2>
-
-        <p class="descricao">
-
-            Atualmente existem diversas ferramentas de Inteligência Artificial
-            capazes de auxiliar na criação de conteúdos, programação,
-            pesquisas e geração de imagens.
-
-        </p>
-
-        <div class="cards-ferramentas">
-
-            <div class="card-ferramenta">
-
-                <h3>🤖 ChatGPT</h3>
-
-                <p>
-                    Assistente de IA desenvolvido pela OpenAI capaz de responder perguntas,
-                    criar textos e auxiliar na programação.
-                </p>
-
-            </div>
-
-            <div class="card-ferramenta">
-
-                <h3>✨ Gemini</h3>
-
-                <p>
-                    Inteligência Artificial criada pelo Google voltada para pesquisas,
-                    escrita, programação e produtividade.
-                </p>
-
-            </div>
-
-            <div class="card-ferramenta">
-
-                <h3>💼 Microsoft Copilot</h3>
-
-                <p>
-                    Ferramenta integrada aos produtos Microsoft para auxiliar em documentos,
-                    planilhas, apresentações e códigos.
-                </p>
-
-            </div>
-
-            <div class="card-ferramenta">
-
-                <h3>🎨 DALL·E</h3>
-
-                <p>
-                    Modelo de IA capaz de criar imagens a partir de descrições em linguagem natural.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-
-</footer>
-
+    <footer class="rodape">
+        <p>Portalia - Projeto de Rafael Oliveira da Silva</p>
+        <p>Website educativo sobre Inteligência Artificial Generativa.</p>
+    </footer>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
-
-<!-- APLICAÇÕES -->
-
-<section class="aplicacoes">
-
-    <h2>Aplicações da Inteligência Artificial</h2>
-
-    <p class="descricao">
-        A Inteligência Artificial está presente em diversas áreas da sociedade,
-        auxiliando pessoas e empresas na realização de tarefas, na tomada de
-        decisões e no desenvolvimento de novas soluções.
-    </p>
-
-    <div class="cards-aplicacoes">
-
-        <div class="card-aplicacao">
-
-            <h3>🏥 Saúde</h3>
-
-            <p>
-                Auxilia na análise de exames, identificação de padrões,
-                pesquisas e desenvolvimento de novas soluções na área da saúde.
-            </p>
-
-        </div>
-
-        <div class="card-aplicacao">
-
-            <h3>🎓 Educação</h3>
-
-            <p>
-                Pode auxiliar estudantes e professores na pesquisa,
-                criação de conteúdos, organização de informações e aprendizagem.
-            </p>
-
-        </div>
-
-        <div class="card-aplicacao">
-
-            <h3>🏢 Empresas</h3>
-
-            <p>
-                É utilizada para automatizar tarefas, analisar dados,
-                melhorar processos e auxiliar no atendimento aos clientes.
-            </p>
-
-        </div>
-
-        <div class="card-aplicacao">
-
-            <h3>💻 Tecnologia</h3>
-
-            <p>
-                Contribui para o desenvolvimento de softwares, programação,
-                segurança digital e criação de novas tecnologias.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="beneficios">
-
-    <h2>Benefícios da Inteligência Artificial</h2>
-
-    <p class="descricao">
-        A Inteligência Artificial oferece diversos benefícios para pessoas,
-        empresas e instituições, contribuindo para a produtividade,
-        inovação e automação de tarefas.
-    </p>
-
-    <div class="cards-beneficios">
-
-        <div class="card-beneficio">
-
-            <h3>⚡ Produtividade</h3>
-
-            <p>
-                Automatiza tarefas e ajuda a realizar atividades de forma
-                mais rápida e eficiente.
-            </p>
-
-        </div>
-
-        <div class="card-beneficio">
-
-            <h3>💡 Inovação</h3>
-
-            <p>
-                Auxilia na criação de novas ideias, produtos, serviços
-                e soluções para diferentes necessidades.
-            </p>
-
-        </div>
-
-        <div class="card-beneficio">
-
-            <h3>🤖 Automação</h3>
-
-            <p>
-                Permite automatizar tarefas repetitivas, reduzindo o tempo
-                necessário para sua realização.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
