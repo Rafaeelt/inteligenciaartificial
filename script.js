@@ -139,3 +139,5 @@ if (carrosselCuidados) {
     mostrarSlide(0);
     iniciarAutomatico();
 }
+
+
