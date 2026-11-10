@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
     <header class="cabecalho">
         <div class="logo">Portal<span>IA</span></div>
 
-        <nav class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#ferramentas">Ferramentas</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#objetivos">Objetivos</a>
-        </nav>
+        <div class="acoes-cabecalho">
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#ferramentas">Ferramentas</a>
+                <a href="#sobre">O que é?</a>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#uso-consciente">Uso consciente</a>
+            </nav>
+            <details class="painel-acessibilidade">
+                <summary>☰ Acessibilidade</summary>
+                <div class="opcoes-acessibilidade">
+                <button class="tema-botao" type="button" aria-label="Ativar tema claro" aria-pressed="false">
+                <span class="tema-icone" aria-hidden="true">☀</span>
+                <span class="tema-texto">Tema</span>
+            </button>
+                <label>Tamanho do texto <select id="tamanho-texto"><option value="1">Padrão</option><option value="1.15">Maior</option><option value="1.3">Muito maior</option></select></label>
+                <label><input type="checkbox" id="alto-contraste"> Alto contraste</label>
+                <label><input type="checkbox" id="reduzir-movimento"> Reduzir movimento</label>
+                <label><input type="checkbox" id="sublinhar-links"> Sublinhar links</label>
+                <button type="button" id="restaurar-acessibilidade">Restaurar preferências</button>
+                </div>
+            </details>
+        </div>
     </header>
 
     <main>
         <section id="inicio" class="hero">
             <div class="hero-texto">
                 <p class="etiqueta">TCC - Técnico em Desenvolvimento de Sistemas</p>
-                <h1>Portalia: um portal de ferramentas de Inteligência Artificial</h1>
+                <h1><span class="marca-titulo">Portal<span>IA</span></span><span class="complemento-titulo">: seu portal de IA</span></h1>
                 <p>
                     O Portalia reúne ferramentas de Inteligência Artificial em um único
                     lugar. A ideia é ajudar o usuário a encontrar uma IA de acordo com
@@ -222,7 +239,7 @@
             </div>
         </section>
 
-        <section class="secao cuidados">
+        <section id="uso-consciente" class="secao cuidados">
             <p class="etiqueta">Uso consciente</p>
             <h2>Use a IA para aprender com responsabilidade</h2>
             <p class="descricao cuidados-intro">
@@ -287,7 +304,110 @@
     <footer class="rodape">
         <p>Portalia - Projeto de Rafael Oliveira da Silva</p>
         <p>Website educativo sobre Inteligência Artificial Generativa.</p>
+        <p>Colégio Reni - Manoel Ribas - Paraná</p>
     </footer>
-    <script src="script.js?v=2"></script>
+    <button class="voltar-topo" type="button" aria-label="Voltar ao topo" hidden>↑</button>
+    <script src="script.js?v=4"></script>
+    <style>
+        .controles-visuais { display: flex; gap: .5rem; flex-wrap: wrap; }
+        .controles-visuais details { position: relative; }
+        .controles-visuais button {
+            padding: .55rem .75rem; border: 1px solid currentColor;
+            border-radius: .5rem; color: inherit; background: transparent;
+            font: inherit; cursor: pointer;
+        }
+        .controles-visuais [data-tema] { text-align: left; border-color: transparent; }
+        .controles-visuais [data-tema]::before {
+            content: ""; display: inline-block; width: 1.25em;
+        }
+        .controles-visuais [data-tema][aria-pressed="true"]::before { content: "✓"; }
+        .controles-visuais summary {
+            display: flex; align-items: center; gap: .35rem;
+            padding: .45rem .55rem;
+            font-size: calc(.85rem * var(--escala-texto));
+            list-style: none;
+            cursor: pointer;
+        }
+        .controles-visuais summary::-webkit-details-marker { display: none; }
+        .controles-visuais summary::after {
+            content: ""; width: .35em; height: .35em;
+            border: solid currentColor; border-width: 0 1px 1px 0;
+            transform: rotate(45deg); opacity: .65;
+        }
+        .controles-visuais details[open] summary::after { transform: rotate(225deg); }
+        .controles-visuais .opcoes-acessibilidade { width: max-content; max-width: 80vw; z-index: 5; }
+        .controles-visuais .ajuste-fonte { display: flex; align-items: center; gap: .6rem; }
+        .painel-acessibilidade[hidden] { display: none; }
+        @media (max-width: 700px) {
+            .controles-visuais details:first-child .opcoes-acessibilidade { left: 0; right: auto; }
+        }
+    </style>
+    <template id="controles-visuais">
+        <div class="controles-visuais">
+            <details>
+                <summary>Tema</summary>
+                <div class="opcoes-acessibilidade">
+                    <button type="button" data-tema="claro">Claro</button>
+                    <button type="button" data-tema="escuro">Escuro</button>
+                    <button type="button" data-tema="contraste">Alto contraste</button>
+                </div>
+            </details>
+            <details>
+                <summary>Fonte</summary>
+                <div class="opcoes-acessibilidade ajuste-fonte">
+                    <button type="button" data-passo="-1" aria-label="Diminuir fonte">A−</button>
+                    <output aria-live="polite"></output>
+                    <button type="button" data-passo="1" aria-label="Aumentar fonte">A+</button>
+                </div>
+            </details>
+        </div>
+    </template>
+    <script>
+        (() => {
+            const anterior = document.querySelector('.painel-acessibilidade');
+            const controles = document.querySelector('#controles-visuais').content.firstElementChild.cloneNode(true);
+            const contraste = document.getElementById('alto-contraste');
+            const fonte = document.getElementById('tamanho-texto');
+            const alternarTema = anterior.querySelector('.tema-botao');
+            const temas = [...controles.querySelectorAll('[data-tema]')];
+            const botoesFonte = [...controles.querySelectorAll('[data-passo]')];
+            const paineis = [...controles.querySelectorAll('details')];
+            const atualizar = () => {
+                const tema = contraste.checked ? 'contraste' : document.body.dataset.tema || 'escuro';
+                temas.forEach(botao => botao.setAttribute('aria-pressed', String(botao.dataset.tema === tema)));
+                controles.querySelector('output').value = Math.round(Number(fonte.value) * 100) + '%';
+                botoesFonte[0].disabled = fonte.selectedIndex <= 0;
+                botoesFonte[1].disabled = fonte.selectedIndex >= fonte.options.length - 1;
+            };
+            temas.forEach(botao => botao.addEventListener('click', () => {
+                const tema = botao.dataset.tema;
+                if (tema !== 'contraste' && (document.body.dataset.tema || 'escuro') !== tema) alternarTema.click();
+                contraste.checked = tema === 'contraste';
+                contraste.dispatchEvent(new Event('change'));
+                atualizar();
+            }));
+            botoesFonte.forEach(botao => botao.addEventListener('click', () => {
+                fonte.selectedIndex += Number(botao.dataset.passo);
+                fonte.dispatchEvent(new Event('change'));
+                atualizar();
+            }));
+            paineis.forEach(painel => painel.addEventListener('toggle', () => {
+                if (painel.open) paineis.forEach(outro => { if (outro !== painel) outro.open = false; });
+            }));
+            document.addEventListener('click', evento => {
+                if (!controles.contains(evento.target)) paineis.forEach(painel => { painel.open = false; });
+            });
+            controles.addEventListener('keydown', evento => {
+                const painel = evento.target.closest('details[open]');
+                if (evento.key === 'Escape' && painel) {
+                    painel.open = false;
+                    painel.querySelector('summary').focus();
+                }
+            });
+            atualizar();
+            anterior.after(controles);
+            anterior.hidden = true;
+        })();
+    </script>
 </body>
 </html>
